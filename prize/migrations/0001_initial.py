@@ -11,7 +11,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name="Address",
+            name="Prize",
             fields=[
                 (
                     "id",
@@ -22,13 +22,12 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("state", models.CharField(max_length=25)),
-                ("city", models.CharField(max_length=127)),
-                ("neighborhood", models.CharField(max_length=200)),
-                ("street", models.CharField(max_length=200)),
-                ("houseNumber", models.CharField(max_length=127)),
-                ("reference", models.TextField(null=True)),
-                ("zipCode", models.CharField(max_length=12)),
+                ("name", models.CharField(max_length=127)),
+                ("numberOfTickets", models.IntegerField()),
+                ("description", models.TextField()),
+                ("pricePerTicket", models.FloatField()),
+                ("drawDate", models.DateField()),
+                ("drawTime", models.TimeField()),
             ],
         ),
     ]
